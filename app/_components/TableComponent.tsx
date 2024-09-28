@@ -6,7 +6,6 @@ import {
   TableRow,
   TableCell,
 } from "@nextui-org/react";
-import Line from "./Line";
 import { StaticImageData } from "next/image";
 interface Coin {
   name: string;

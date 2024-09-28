@@ -1,6 +1,5 @@
 "use client";
 import ButtonMain from "@/app/_components/ButtonMain";
-import LoginModal from "@/app/_components/LoginModal";
 import SuccessSvg from "@/app/svgs/successSvg";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";

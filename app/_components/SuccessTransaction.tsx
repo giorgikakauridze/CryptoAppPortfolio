@@ -11,7 +11,6 @@ const SuccessTransaction = () => {
   const {
     coins,
     selectedPayment,
-    paymentDetails,
     selectedCrypto,
     withdrawAmount,
     isLoading,

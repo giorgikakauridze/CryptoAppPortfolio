@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import BlogCard from "../_components/BlogCard";
 import blogImage1 from "../images/blogImage1.jpg";

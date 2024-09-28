@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import ButtonMain from "./_components/ButtonMain";
 
-const Error = ({ error, reset }) => {
+const Error = ({ error }) => {
   const router = useRouter();
 
   return (

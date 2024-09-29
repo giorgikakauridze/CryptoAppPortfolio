@@ -26,7 +26,7 @@ const SuccessTransaction = () => {
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [setIsLoading]);
 
   const selectedPaymentOptimized =
     selectedPayment === "Bank / Wire transfer " ? "Bank" : selectedPayment;

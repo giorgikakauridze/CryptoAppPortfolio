@@ -11,9 +11,9 @@ const BlogPage = () => {
         <h1 className="text-5xl font-[1000]">BLOG</h1>
         <p className="text-xl w-[50%] mobile:text-xs font-[1000]">
           Stay updated with the latest insights and developments in the crypto
-          world. Whether you're a seasoned trader or just starting out, our blog
-          offers valuable information on topics ranging from market trends to
-          the most secure crypto strategies. Discover tips, tools, and
+          world. Whether you are a seasoned trader or just starting out, our
+          blog offers valuable information on topics ranging from market trends
+          to the most secure crypto strategies. Discover tips, tools, and
           techniques to help you make informed decisions in the ever-evolving
           world of cryptocurrencies.
         </p>

@@ -51,7 +51,7 @@ const LoginModal = () => {
       setUser(storedUserObject);
       setIsLogged(true); // Restore login state from local storage
     }
-  }, [setIsLogged]); // Only run once when the component mounts
+  }, [setIsLogged, setUser]); // Only run once when the component mounts
 
   return (
     <>

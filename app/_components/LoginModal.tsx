@@ -38,20 +38,6 @@ const LoginModal = () => {
       setError("Invalid credentials, please try again.");
     }
   };
-  useEffect(() => {
-    const storedIsLogged = localStorage.getItem("isLogged");
-    const storedUser = localStorage.getItem("LoggedUser");
-    const storedUserObject = {
-      fullName: storedUser || "",
-      email: "example@gmail.com",
-      password: "password",
-      id: 900,
-    };
-    if (storedIsLogged === "true") {
-      setUser(storedUserObject);
-      setIsLogged(true); // Restore login state from local storage
-    }
-  }, [setIsLogged, setUser]); // Only run once when the component mounts
 
   return (
     <>

@@ -18,7 +18,7 @@ import { useMyContext } from "../_context/context";
 
 const LoginModal = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const { setIsLogged, setUser } = useMyContext(); // Access to context
+  const { setIsLogged, setUser } = useMyContext();
   const [error, setError] = useState<string | null>(null);
 
   const handleLogin = async (formData: FormData) => {
@@ -30,7 +30,7 @@ const LoginModal = () => {
         localStorage.setItem("isLogged", "true");
         localStorage.setItem("LoggedUser", result.isValid[0].fullName);
         setUser(result.isValid[0]);
-        setIsLogged(true); // Update context if login is successful
+        setIsLogged(true);
       } else {
         setError("Invalid credentials, please try again.");
       }

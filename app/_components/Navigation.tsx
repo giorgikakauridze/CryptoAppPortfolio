@@ -90,7 +90,6 @@ const Navigation = () => {
                 </ButtonMain>
               </>
             )}
-            <LoginModal />
           </span>
         </div>
       </div>

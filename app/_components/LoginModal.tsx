@@ -1,5 +1,5 @@
 "use client";
-import React, {  useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Modal,
   ModalContent,
@@ -13,7 +13,7 @@ import {
 } from "@nextui-org/react";
 import MailIcon from "../svgs/MailIcon";
 import LockIcon from "../svgs/LockIcon";
-import { getUsers } from "../_lib/actions"; // Server-side action
+import { getUsers } from "../_lib/actions";
 import { useMyContext } from "../_context/context";
 
 const LoginModal = () => {
@@ -23,7 +23,6 @@ const LoginModal = () => {
 
   const handleLogin = async (formData: FormData) => {
     try {
-      // Call server action to validate login
       const result = await getUsers(formData);
 
       if (result.success) {
@@ -38,10 +37,24 @@ const LoginModal = () => {
       setError("Invalid credentials, please try again.");
     }
   };
+  useEffect(() => {
+    const storedIsLogged = localStorage.getItem("isLogged");
+    const storedUser = localStorage.getItem("LoggedUser");
+    const storedUserObject = {
+      fullName: storedUser || "",
+      email: "example@gmail.com",
+      password: "password",
+      id: 900,
+    };
+    if (storedIsLogged === "true") {
+      setUser(storedUserObject);
+      setIsLogged(true);
+    }
+  }, [setIsLogged, setUser]);
 
   return (
     <>
-      <Button onClick={onOpen} size="lg" color="secondary">
+      <Button onPress={onOpen} size="lg" color="secondary">
         Log in
       </Button>
 
@@ -49,7 +62,6 @@ const LoginModal = () => {
         <ModalContent className="text-white bg-[rgb(29,27,64)]">
           {(onClose) => (
             <>
-              {/* Form submission is handled by server-side action */}
               <form action={handleLogin}>
                 <ModalHeader className="flex flex-col gap-1">
                   Log in

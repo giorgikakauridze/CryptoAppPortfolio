@@ -106,7 +106,7 @@ const Navigation = () => {
               currentPath === "/account" ? "text-[rgb(108,107,158)]" : ""
             } text-xl flex gap-5`}
           >
-            {isLogged ? (
+{/*             {isLogged ? (
               <Link href={"/account"}>
                 <div className="flex cursor-pointer items-center gap-5 ">
                   {optimizedName}
@@ -116,9 +116,9 @@ const Navigation = () => {
                 </div>
               </Link>
             ) : (
-              <>
+              <> */}
                 <LoginModal />
-                <ButtonMain
+{/*                 <ButtonMain
                   active={true}
                   onClick={() => router.push("/signup")}
                   type="primary"
@@ -126,8 +126,8 @@ const Navigation = () => {
                   Sign up
                 </ButtonMain>
               </>
-            )}
-  <LoginModal />
+            )} */}
+
           </span>
         </div>
       </div>

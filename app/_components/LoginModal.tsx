@@ -55,7 +55,7 @@ const LoginModal = () => {
 
   return (
     <>
-      <Button onPress={onOpen} size="lg" color="secondary">
+      <Button onClick={onOpen} size="lg" color="secondary">
         Log in
       </Button>
 

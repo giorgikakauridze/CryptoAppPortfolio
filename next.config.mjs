@@ -9,5 +9,7 @@ const nextConfig = {
       },
     ],
   },
+  optimizeCss: false,
 };
+
 export default nextConfig;

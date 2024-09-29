@@ -106,27 +106,6 @@ const Navigation = () => {
               currentPath === "/account" ? "text-[rgb(108,107,158)]" : ""
             } text-xl flex gap-5`}
           >
-            {isLogged ? (
-              <Link href={"/account"}>
-                <div className="flex cursor-pointer items-center gap-5 ">
-                  {optimizedName}
-                  <div className="bg-[rgb(102,57,228)] p-3 rounded-[50%]">
-                    <AccountSvg />
-                  </div>
-                </div>
-              </Link>
-            ) : (
-              <>
-                <LoginModal />
-                <ButtonMain
-                  active={true}
-                  onClick={() => router.push("/signup")}
-                  type="primary"
-                >
-                  Sign up
-                </ButtonMain>
-              </>
-            )}
             <LoginModal />
           </span>
         </div>

@@ -48,7 +48,7 @@ export default function RootLayout({
               <Suspense fallback={<SpinnerComponent />}>
                 <div className="pb-96">{children} </div>
               </Suspense>
-              <Partners />
+              {/* <Partners /> */}
               <Explore />
             </MyProvider>
           </NextUIProvider>

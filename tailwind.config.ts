@@ -37,6 +37,7 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/components/Popover.js",
     "./node_modules/@nextui-org/theme/dist/components/PopoverTrigger.js",
     "./node_modules/@nextui-org/theme/dist/components/PopoverContent.js",
+    "./node_modules/@nextui-org/react",
   ],
   theme: {
     extend: {

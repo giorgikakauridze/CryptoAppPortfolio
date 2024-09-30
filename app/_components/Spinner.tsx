@@ -1,8 +1,8 @@
 import React from "react";
-// import { Spinner } from "@nextui-org/react";
+import { Spinner } from "@nextui-org/react";
 
 const SpinnerComponent = () => {
-  return <div>Loading...</div>;
+  return <Spinner color="secondary" />;
 };
 
 export default SpinnerComponent;
